@@ -100,7 +100,7 @@ spec:
             path: /var/log/mnt/docker/containers
         - name: mntpods
           hostPath:
-            path: var/log/mnt/kubelet/pods
+            path: /var/log/mnt/kubelet/pods
         - name: varlibdockercontainers
           hostPath:
             path: /var/log/lib/docker/containers

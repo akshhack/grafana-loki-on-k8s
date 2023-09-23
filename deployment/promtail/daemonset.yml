@@ -58,7 +58,7 @@ spec:
           - name: config-volume
             mountPath: /etc/promtail
           - name: run
-            mountPath: /run/promtail
+            mountPath: /var/log/run/promtail
             readOnly: true
           - name: varlog
             mountPath: /var/log
@@ -92,7 +92,7 @@ spec:
             name: promtail
         - name: run
           hostPath:
-            path: /run/promtail
+            path: /var/log/run/promtail
         - name: varlog
           hostPath:
             path: /var/log

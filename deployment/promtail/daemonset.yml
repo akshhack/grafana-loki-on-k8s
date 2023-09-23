@@ -59,6 +59,7 @@ spec:
             mountPath: /etc/promtail
           - name: run
             mountPath: /run/promtail
+            readOnly: true
           - name: varlog
             mountPath: /var/log
             readOnly: true

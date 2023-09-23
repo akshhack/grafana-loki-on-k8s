@@ -63,20 +63,20 @@ spec:
             mountPath: /var/log
             readOnly: true
           - name: varlibdockercontainers
-            mountPath: /var/lib/docker/containers
+            mountPath: /var/log/lib/docker/containers
             readOnly: true
           - name: mntpods
-            mountPath: /mnt/kubelet/pods
+            mountPath: /var/log/mnt/kubelet/pods
             readOnly: true
           - name: mntlibdockercontainers
-            mountPath: /mnt/docker/containers
+            mountPath: /var/log/mnt/docker/containers
             readOnly: true
           - name: tmp
             mountPath: /tmp
             subPath: tmp
             readOnly: false
           securityContext:
-            privileged: true
+            privileged: false
             readOnlyRootFilesystem: true
             runAsUser: 0
             seccompProfile:
